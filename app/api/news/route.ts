@@ -16,7 +16,7 @@ export async function GET() {
     
     return NextResponse.json(newsItems);
   } catch (error) {
-    console.error('Error fetching news:', error);
+    console.error('Error fetching news');
     return NextResponse.json(
       { error: 'Failed to fetch news' },
       { status: 500 }
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
       { status: 201 }
     );
   } catch (error) {
-    console.error('Error creating news item:', error);
+    console.error('Error creating news item');
     return NextResponse.json(
       { error: 'Failed to create news item' },
       { status: 500 }

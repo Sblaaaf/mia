@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
     
     return NextResponse.json(artworks);
   } catch (error) {
-    console.error('Error fetching artworks:', error);
+    console.error('Error fetching artworks');
     return NextResponse.json(
       { error: 'Failed to fetch artworks' },
       { status: 500 }
@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
       { status: 201 }
     );
   } catch (error) {
-    console.error('Error creating artwork:', error);
+    console.error('Error creating artwork');
     return NextResponse.json(
       { error: 'Failed to create artwork' },
       { status: 500 }

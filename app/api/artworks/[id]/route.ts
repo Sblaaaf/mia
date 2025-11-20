@@ -19,7 +19,7 @@ export async function GET(
     
     return NextResponse.json(artwork);
   } catch (error) {
-    console.error('Error fetching artwork:', error);
+    console.error('Error fetching artwork');
     return NextResponse.json(
       { error: 'Failed to fetch artwork' },
       { status: 500 }
@@ -54,7 +54,7 @@ export async function PUT(
     
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error updating artwork:', error);
+    console.error('Error updating artwork');
     return NextResponse.json(
       { error: 'Failed to update artwork' },
       { status: 500 }
@@ -79,7 +79,7 @@ export async function DELETE(
     
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error deleting artwork:', error);
+    console.error('Error deleting artwork');
     return NextResponse.json(
       { error: 'Failed to delete artwork' },
       { status: 500 }

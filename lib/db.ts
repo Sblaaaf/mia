@@ -10,6 +10,10 @@ export async function connectToDatabase() {
     return { client: cachedClient, db: cachedDb };
   }
 
+  if (!process.env.MONGODB_URI && process.env.NODE_ENV === 'production') {
+    throw new Error('Please define the MONGODB_URI environment variable in production');
+  }
+
   const client = await MongoClient.connect(MONGODB_URI);
   const db = client.db();
 
