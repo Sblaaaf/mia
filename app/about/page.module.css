@@ -1,0 +1,109 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.imageSection {
+  position: sticky;
+  top: 100px;
+}
+
+.artistImage {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.textSection h2 {
+  font-size: 2rem;
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: var(--color-secondary);
+  font-style: italic;
+  font-weight: 400;
+  margin: -1rem 0 1rem 0;
+}
+
+.bio p {
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.technique {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--color-background);
+  border-left: 4px solid var(--color-secondary);
+  border-radius: 4px;
+}
+
+.technique h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.technique p {
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+@media (max-width: 968px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .imageSection {
+    position: static;
+  }
+
+  .artistImage {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
